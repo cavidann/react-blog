@@ -1,0 +1,33 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+img{
+  width: 100%;
+}
+
+.active{
+  color: red;
+}
+
+.left{
+  float: left;
+}
+
+.my-md-50{
+  width: 50%
+}
+
+.portfolio{
+  width:70%
+}
+
+.tab-head{
+  display: flex;
+}
+
+.tab-head-item{
+  width:'20%';
+  text-align:'center';
+}
