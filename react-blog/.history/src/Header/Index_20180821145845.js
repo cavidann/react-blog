@@ -12,7 +12,7 @@ import Contact from './../Contact/Index'
 import Education from './../Education/Index'
 import Experience from './../Experience/Index'
 import Skill from './../Skill/Index'
-import Form from './../Mail/Index'
+import Mal from './../Mail/Index'
 
 
 import {
@@ -51,8 +51,8 @@ class Header extends Component {
             <a href="img/Cavidan_Talıbov.pdf" rel="noreferrer noopener" target="_blank">Show Cv`s Pdf</a>
           </CvMore>
 
-          <Mail onClick={() => this.showConact(<Form />)}>
-            <div >
+          <Mail onClick={() => this.showConact(<Mail />)}>
+            <div style={{ width: '100%' }}>
               <Icon size={'32px'} icon={user} />
             </div>
           </Mail>

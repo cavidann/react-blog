@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import { Icon } from 'react-icons-kit'
 import { user } from 'react-icons-kit/fa/user'
@@ -9,10 +10,9 @@ import { code } from 'react-icons-kit/fa/code'
 
 import Personal from './../Personal/Index'
 import Contact from './../Contact/Index'
-import Education from './../Education/Index'
+import Eduction from './../Education/Index'
 import Experience from './../Experience/Index'
 import Skill from './../Skill/Index'
-import Form from './../Mail/Index'
 
 
 import {
@@ -26,7 +26,6 @@ import {
 // import cv from './../api/api'
 
 class Header extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -35,11 +34,11 @@ class Header extends Component {
     this.showConact = this.showConact.bind(this);
   }
 
-  showConact(page) {
-    console.log()
-    this.setState({
-      active: page
-    })
+  showConact(event) {
+    console.log(event.target.name)
+    // this.setState = {
+    //   active: page
+    // }
   }
 
   render() {
@@ -50,40 +49,37 @@ class Header extends Component {
           <CvMore>
             <a href="img/Cavidan_Talıbov.pdf" rel="noreferrer noopener" target="_blank">Show Cv`s Pdf</a>
           </CvMore>
-
-          <Mail onClick={() => this.showConact(<Form />)}>
-            <div >
+          <Mail name='ss' onClick={this.showConact}>
+            <div style={{ width: '100%' }}>
               <Icon size={'32px'} icon={user} />
             </div>
           </Mail>
         </ImgOuter>
-        <MenuHeader>
-          <MenuItem onClick={() => this.showConact(<Personal />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={user} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Contact />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={comments} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Education />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={book} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Experience />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={blackTie} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Skill />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={code} />
-              </div>
-          </MenuItem>
-        </MenuHeader>
+        <div onClick={this.showConact('Personal')}>
+          <div className='icons'>
+            <Icon size={'32px'} icon={user} />
+          </div>
+        </div>
+        <div onClick={this.showConact('Contact')}>
+          <div className='icons'>
+            <Icon size={'32px'} icon={comments} />
+          </div>
+        </div>
+        <div>
+          <div onClick={this.showConact('Education')} className='icons'>
+            <Icon size={'32px'} icon={book} />
+          </div>
+        </div>
+        <div>
+          <div onClick={this.showConact('Experience')} className='icons'>
+            <Icon size={'32px'} icon={blackTie} />
+          </div>
+        </div>
+        <div>
+          <div onClick={this.showConact('Skills')} className='icons'>
+            <Icon size={'32px'} icon={code} />
+          </div>
+        </div>
         <div>
           {this.state.active}
         </div>

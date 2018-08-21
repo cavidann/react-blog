@@ -52,7 +52,7 @@ class Header extends Component {
           </CvMore>
 
           <Mail onClick={() => this.showConact(<Form />)}>
-            <div >
+            <div style={{ width: '100%',color:'red' }}>
               <Icon size={'32px'} icon={user} />
             </div>
           </Mail>

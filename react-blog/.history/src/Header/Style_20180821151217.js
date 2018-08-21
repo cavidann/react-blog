@@ -24,7 +24,7 @@ export const MenuItem = styled.li`
   width: 100%;
   text-align: center;
   box-shadow: 0px 2px 25px;
-  transition: 0.3s;
+  transition: 0.5s;
   padding: 5px 0px;
   display: flex;
   justify-content: center;
@@ -33,6 +33,8 @@ export const MenuItem = styled.li`
   cursor:pointer;
   &:hover{
     box-shadow: 0px 0.1px 6px;
+    background: transparent;
+    color: #484848;
   }
 `
 

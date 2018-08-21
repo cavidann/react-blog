@@ -12,7 +12,7 @@ import Contact from './../Contact/Index'
 import Education from './../Education/Index'
 import Experience from './../Experience/Index'
 import Skill from './../Skill/Index'
-import Form from './../Mail/Index'
+import Mal from './../Mail/Index'
 
 
 import {
@@ -51,37 +51,47 @@ class Header extends Component {
             <a href="img/Cavidan_Talıbov.pdf" rel="noreferrer noopener" target="_blank">Show Cv`s Pdf</a>
           </CvMore>
 
-          <Mail onClick={() => this.showConact(<Form />)}>
-            <div >
+          <Mail onClick={() => this.showConact(<Mail />)}>
+            <div style={{ width: '100%' }}>
               <Icon size={'32px'} icon={user} />
             </div>
           </Mail>
         </ImgOuter>
         <MenuHeader>
-          <MenuItem onClick={() => this.showConact(<Personal />)}>
+          <MenuItem>
+            <div onClick={() => this.showConact(<Personal />)}>
               <div className='icons'>
                 <Icon size={'32px'} icon={user} />
               </div>
+            </div>
           </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Contact />)}>
+          <MenuItem>
+            <div onClick={() => this.showConact(<Contact />)}>
               <div className='icons'>
                 <Icon size={'32px'} icon={comments} />
               </div>
+            </div>
           </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Education />)}>
+          <MenuItem>
+            <div onClick={() => this.showConact(<Education />)}>
               <div className='icons'>
                 <Icon size={'32px'} icon={book} />
               </div>
+            </div>
           </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Experience />)}>
+          <MenuItem>
+            <div onClick={() => this.showConact(<Experience />)}>
               <div className='icons'>
                 <Icon size={'32px'} icon={blackTie} />
               </div>
+            </div>
           </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Skill />)}>
+          <MenuItem>
+            <div onClick={() => this.showConact(<Skill />)}>
               <div className='icons'>
                 <Icon size={'32px'} icon={code} />
               </div>
+            </div>
           </MenuItem>
         </MenuHeader>
         <div>

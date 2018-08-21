@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import { Icon } from 'react-icons-kit'
 import { user } from 'react-icons-kit/fa/user'
@@ -9,10 +10,9 @@ import { code } from 'react-icons-kit/fa/code'
 
 import Personal from './../Personal/Index'
 import Contact from './../Contact/Index'
-import Education from './../Education/Index'
+import Eduction from './../Education/Index'
 import Experience from './../Experience/Index'
 import Skill from './../Skill/Index'
-import Form from './../Mail/Index'
 
 
 import {
@@ -26,20 +26,19 @@ import {
 // import cv from './../api/api'
 
 class Header extends Component {
-
-  constructor(props) {
+  constructor(props){
     super(props);
-    this.state = {
-      active: <Personal />
+    this.state={
+      active: <Personal/>
     };
-    this.showConact = this.showConact.bind(this);
+    this.showConact=this.showConact.bind(this);
   }
 
-  showConact(page) {
-    console.log()
-    this.setState({
-      active: page
-    })
+  showConact(page){
+    console.log(page)
+    this.setState={
+      active:page
+    }
   }
 
   render() {
@@ -50,44 +49,15 @@ class Header extends Component {
           <CvMore>
             <a href="img/Cavidan_Talıbov.pdf" rel="noreferrer noopener" target="_blank">Show Cv`s Pdf</a>
           </CvMore>
-
-          <Mail onClick={() => this.showConact(<Form />)}>
-            <div >
+          <Mail onClick={this.showConact(Contact)}>
+            <div style={{ width: '100%' }}>
               <Icon size={'32px'} icon={user} />
             </div>
           </Mail>
         </ImgOuter>
-        <MenuHeader>
-          <MenuItem onClick={() => this.showConact(<Personal />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={user} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Contact />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={comments} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Education />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={book} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Experience />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={blackTie} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Skill />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={code} />
-              </div>
-          </MenuItem>
-        </MenuHeader>
         <div>
           {this.state.active}
         </div>
-
         {/* <Tabs>
           <TabList className='tab-head'>
             <Tab className='tab-head-item'>

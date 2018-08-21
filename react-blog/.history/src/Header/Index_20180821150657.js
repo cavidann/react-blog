@@ -52,38 +52,28 @@ class Header extends Component {
           </CvMore>
 
           <Mail onClick={() => this.showConact(<Form />)}>
-            <div >
+            <div style={{ width: '100%', color: 'red' }}>
               <Icon size={'32px'} icon={user} />
             </div>
           </Mail>
         </ImgOuter>
         <MenuHeader>
           <MenuItem onClick={() => this.showConact(<Personal />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={user} />
-              </div>
+            <Icon size={'32px'} icon={user} />
           </MenuItem>
           <MenuItem onClick={() => this.showConact(<Contact />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={comments} />
-              </div>
+            <Icon size={'32px'} icon={comments} />
           </MenuItem>
           <MenuItem onClick={() => this.showConact(<Education />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={book} />
-              </div>
+            <Icon size={'32px'} icon={book} />
           </MenuItem>
           <MenuItem onClick={() => this.showConact(<Experience />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={blackTie} />
-              </div>
+            <Icon size={'32px'} icon={blackTie} />
           </MenuItem>
           <MenuItem onClick={() => this.showConact(<Skill />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={code} />
-              </div>
-          </MenuItem>
-        </MenuHeader>
+            <Icon size={'32px'} icon={code} />
+          </MenuItem >
+        </MenuHeader >
         <div>
           {this.state.active}
         </div>
@@ -141,7 +131,7 @@ class Header extends Component {
             <Skill />
           </TabPanel>
         </Tabs> */}
-      </LeftMenu>
+      </LeftMenu >
 
     )
   }
