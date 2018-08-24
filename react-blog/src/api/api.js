@@ -153,33 +153,33 @@ const cv = {
         ]
     },
     "portfolio": {
-        "header":[
+        "header": [
             {
-                "id":1,
+                "id": 0,
                 "header": "Show All",
                 "filter": "all"
             },
             {
-                "id":2,
+                "id": 1,
                 "header": "Team",
                 "filter": "team"
             },
-            
+
             {
-                "id":3,
+                "id": 2,
                 "header": "Asp.Net",
                 "filter": "asp"
             },
             {
-                "id":4,
+                "id": 3,
                 "header": "C-sharp",
                 "filter": "c-sharp"
             },
             {
-                "id":5,
+                "id": 4,
                 "header": "Themplates",
                 "filter": "theme"
-            }            
+            }
         ],
         "content": [
             {
@@ -188,7 +188,7 @@ const cv = {
                 link: 'https://github.com/cavidann/Denta-c',
                 name: 'Denta-C',
                 description: 'Web Template For Dentits',
-                category: 'theme'
+                category: 'all theme'
             },
             {
                 id: 2,
@@ -196,7 +196,7 @@ const cv = {
                 link: 'https://github.com/cavidann/C-Sharp/tree/master/uber%20taksi%20yonlendirme',
                 name: 'Uber Operator',
                 description: 'Uber Operator Console Application',
-                category: 'c-sharp'
+                category: 'all c-sharp'
             },
             {
                 id: 3,
@@ -204,7 +204,7 @@ const cv = {
                 link: 'https://github.com/cavidann/C-Sharp/tree/master/masin_benzin',
                 name: 'Car Fuel Control',
                 description: 'Car Fuel Control Console Application',
-                category: 'c-sharp'
+                category: 'all c-sharp'
             },
             {
                 id: 4,
@@ -212,7 +212,7 @@ const cv = {
                 link: 'https://github.com/cavidann/C-Sharp/tree/master/hospital%20registry',
                 name: 'Hospital Registry',
                 description: 'Hospital Registry Console Application',
-                category: 'c-sharp'
+                category: 'all c-sharp'
             },
             {
                 id: 5,
@@ -220,7 +220,7 @@ const cv = {
                 link: 'https://github.com/cavidann/C-Sharp/tree/master/cinemalastone',
                 name: 'Cinema Brown',
                 description: 'Cinema Brown From Application',
-                category: 'c-sharp'
+                category: 'all c-sharp'
             },
             {
                 id: 6,
@@ -228,7 +228,7 @@ const cv = {
                 link: 'https://github.com/cavidann/DJ-ReedRussell-MVC',
                 name: 'Strings',
                 description: 'Full Dj Web Site',
-                category: 'asp'
+                category: 'all asp'
             },
             {
                 id: 7,
@@ -236,7 +236,7 @@ const cv = {
                 link: 'https://github.com/cavidann/vcard',
                 name: 'Vcard',
                 description: 'Console Application For Virtual Card',
-                category: 'c-sharp'
+                category: 'all c-sharp'
             },
             {
                 id: 8,
@@ -244,7 +244,7 @@ const cv = {
                 link: 'https://github.com/cavidann/asc____general',
                 name: 'Junior',
                 description: 'Site for parents which have children 0-5 year old',
-                category: 'asp team'
+                category: 'all asp team'
             },
             {
                 id: 9,
@@ -252,7 +252,7 @@ const cv = {
                 link: 'https://github.com/cavidann/tictactoe',
                 name: 'Tictactoe',
                 description: 'The Game Which Everyone Knows',
-                category: 'c-sharp'
+                category: 'all c-sharp'
             },
             {
                 id: 10,
@@ -260,7 +260,7 @@ const cv = {
                 link: 'https://github.com/cavidann/dj-reedrussell-FrontEnd',
                 name: 'Strings',
                 description: 'Full Dj Template',
-                category: 'theme'
+                category: 'all theme'
             },
             {
                 id: 11,
@@ -268,7 +268,7 @@ const cv = {
                 link: 'https://cavidann.github.io/starter/',
                 name: 'Starter',
                 description: 'One Page Creative Agency Template',
-                category: 'theme'
+                category: 'all theme'
             },
             {
                 id: 12,
@@ -276,7 +276,7 @@ const cv = {
                 link: 'https://cavidann.github.io/Softbox/',
                 name: 'Softbox',
                 description: 'One Page Creative Agency Template',
-                category: 'theme'
+                category: 'all theme'
             },
             {
                 id: 13,
@@ -284,7 +284,7 @@ const cv = {
                 link: 'http://yasamal.mida.az/',
                 name: 'Yasamal Mida',
                 description: 'A site for a Yasamal project of the State Agency for Housing Construction under the President of the Republic of Azerbaijan.',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 14,
@@ -292,7 +292,7 @@ const cv = {
                 link: 'https://cavidann.github.io/azersun/',
                 name: 'Azersun',
                 description: 'Five day`s speed coding for Azersun (not responsive, for a large screen larger than 1500px)',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 15,
@@ -300,7 +300,7 @@ const cv = {
                 link: 'https://cavidann.github.io/worldpandaria/',
                 name: 'World Pandaria',
                 description: 'Web page for World of Warcraft',
-                category: 'theme'
+                category: 'all theme'
             },
             {
                 id: 16,
@@ -308,7 +308,7 @@ const cv = {
                 link: 'http://aqsia.coder.az/',
                 name: 'AQSIA',
                 description: '"Azərbaycanda Qadın Sahibkarlığının İnkişafı Assosiasiyası" İctimai Birliyi İctimai Birliyi',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 17,
@@ -316,7 +316,7 @@ const cv = {
                 link: 'https://qarabagh.com/',
                 name: 'QARABAGH',
                 description: 'Qarabağ Futbol Klubu',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 18,
@@ -324,7 +324,7 @@ const cv = {
                 link: 'http://coder.az/vurgun/',
                 name: 'Vurğun',
                 description: 'Hazır Premium Kompleks',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 19,
@@ -332,7 +332,7 @@ const cv = {
                 link: 'http://coder.az/shell/index.html',
                 name: 'Shell',
                 description: 'Site for Lubristar LLC',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 20,
@@ -340,7 +340,7 @@ const cv = {
                 link: 'http://coder.az/global',
                 name: 'Global Technologies',
                 description: 'Site for Global Technologies',
-                category: 'theme team'
+                category: 'all theme team'
             },
             {
                 id: 21,
@@ -348,7 +348,7 @@ const cv = {
                 link: 'http://coder.az/israFly',
                 name: 'IsraFly',
                 description: 'Turizm Site for IsraFly',
-                category: 'theme team'
+                category: 'all theme team'
             }
         ]
     }

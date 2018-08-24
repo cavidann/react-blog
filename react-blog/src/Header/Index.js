@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import {envelope} from 'react-icons-kit/fa/envelope'
 import { Icon } from 'react-icons-kit'
 import { user } from 'react-icons-kit/fa/user'
 import { comments } from 'react-icons-kit/fa/comments'
@@ -14,7 +15,6 @@ import Experience from './../Experience/Index'
 import Skill from './../Skill/Index'
 import Form from './../Mail/Index'
 
-
 import {
   LeftMenu,
   MenuHeader,
@@ -23,22 +23,35 @@ import {
   CvMore,
   Mail
 } from "./Style.js"
-// import cv from './../api/api'
+
+
+const tabMenu = [
+  { 'index': 1,'component':<Personal />, 'icon': user },
+  { 'index': 2,'component':<Contact />, 'icon': comments },
+  { 'index': 3,'component':<Education />, 'icon': book },
+  { 'index': 4,'component':<Experience />, 'icon': blackTie },
+  { 'index': 5,'component':<Skill />, 'icon': code }
+]
 
 class Header extends Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
-      active: <Personal />
+      activeContent: <Personal />,
+      index: 1
     };
+
     this.showConact = this.showConact.bind(this);
   }
 
-  showConact(page) {
+  showConact(index,activeContent) {
     console.log()
+
     this.setState({
-      active: page
+      activeContent,
+      index
     })
   }
 
@@ -51,96 +64,26 @@ class Header extends Component {
             <a href="img/Cavidan_Talıbov.pdf" rel="noreferrer noopener" target="_blank">Show Cv`s Pdf</a>
           </CvMore>
 
-          <Mail onClick={() => this.showConact(<Form />)}>
+          <Mail className={this.state.index === 0 ? "active" : null} onClick={() => this.showConact(0,<Form />)}>
             <div >
-              <Icon size={'32px'} icon={user} />
+              <Icon size={'32px'} icon={envelope} />
             </div>
           </Mail>
         </ImgOuter>
         <MenuHeader>
-          <MenuItem onClick={() => this.showConact(<Personal />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={user} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Contact />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={comments} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Education />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={book} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Experience />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={blackTie} />
-              </div>
-          </MenuItem>
-          <MenuItem onClick={() => this.showConact(<Skill />)}>
-              <div className='icons'>
-                <Icon size={'32px'} icon={code} />
-              </div>
-          </MenuItem>
+          {
+            tabMenu.map((item) =>
+              <MenuItem key={item.index} className={this.state.index === item.index ? "active" : null} onClick={() => this.showConact(item.index, item.component)}>
+                <div className='icons'>
+                  <Icon size={'32px'} icon={item.icon} />
+                </div>
+              </MenuItem>
+            )
+          }
         </MenuHeader>
-        <div>
-          {this.state.active}
+        <div style={{ padding: '0px 39px' }}>
+          {this.state.activeContent}
         </div>
-
-        {/* <Tabs>
-          <TabList className='tab-head'>
-            <Tab className='tab-head-item'>
-              <div className='icons'>
-                <Icon size={'32px'} icon={user} />
-              </div>
-            </Tab>
-
-            <Tab className='tab-head-item'>
-              <div className='icons'>
-                <Icon size={'32px'} icon={comments} />
-              </div>
-            </Tab>
-
-            <Tab className='tab-head-item'>
-              <div className='icons'>
-                <Icon size={'32px'} icon={book} />
-              </div>
-            </Tab>
-
-            <Tab className='tab-head-item'>
-              <div className='icons'>
-                <Icon size={'32px'} icon={blackTie} />
-              </div>
-            </Tab>
-            
-            <Tab className='tab-head-item'>
-              <div className='icons'>
-                <Icon size={'32px'} icon={code} />
-              </div>
-            </Tab>
-          </TabList>
-
-          <TabPanel>
-            <Personal />
-          </TabPanel>
-
-          <TabPanel>
-            <Contact />
-          </TabPanel>
-
-          <TabPanel>
-            <Eduction />
-          </TabPanel>
-
-          <TabPanel>
-            <Experience />
-          </TabPanel>
-
-          <TabPanel>
-            <Skill />
-          </TabPanel>
-        </Tabs> */}
       </LeftMenu>
 
     )

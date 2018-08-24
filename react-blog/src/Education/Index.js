@@ -8,15 +8,18 @@ class Education extends Component {
     render() {
         return (
             <div>
-                <h1>{base.header}</h1>
+                <h4>{base.header}</h4>
                 <ul>
                     {
                         content.map(function (item) {
                             return(
                             <li key={item.id}>
                                 <b>{item.school}</b>
-                                <p>{item.profession}</p>
-                                <p>{item.range}</p>
+                                <p>
+                                    {item.profession}
+                                    <br/>
+                                    {item.range}
+                                </p>
                             </li>
                             )
                         })
