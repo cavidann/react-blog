@@ -25,7 +25,9 @@ img{
 .my-md-50{
   width: 50%
 }
-
+.my-md-75{
+  width: 75%;
+}
 .portfolio{
   width:70%
 }
@@ -48,6 +50,11 @@ img{
 .active{
   box-shadow: 0px 0px 0px!important;
   cursor: auto!important;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
 }
 
 p{
@@ -99,3 +106,71 @@ textarea{
   cursor: pointer;
 }
 
+
+.portfolioItem{
+  display:block;
+  text-decoration:none;
+}
+.portfolioItem:visited{
+  border:1px solid red!important;
+}
+.blog{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 16px;
+}
+.blogImgOuter, .blogContent{
+  width: 50%;
+  padding: 0px 16px;
+  box-sizing: border-box;
+}
+.blogContent h1{
+    font-size: 32px;
+    color: #ffe915;
+    font-weight: 100;
+    margin: 0;
+}
+
+.blogImgOuter img{
+  margin-top: 10px;
+}
+
+.blogContent p{
+  color: white;
+}
+
+.my-btn1, .my-btn2{
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  display: inline-block;
+  width: max-content;
+}
+
+.my-btn1{
+  background: #ffe915;
+  color: #484848;
+  border: 2px solid transparent;
+}
+
+.my-btn1:hover{
+  background: transparent;
+  color: #ffe915;
+  border-color: #ffe915;
+}
+
+.my-btn2{
+  background: transparent;
+  color: #ffe915;
+  border: 2px solid #ffe915;
+}
+
+.my-btn2:hover{
+  background: #ffe915;
+  color: #484848;
+  border-color: transparent;
+}

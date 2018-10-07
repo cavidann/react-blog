@@ -161,8 +161,8 @@ const cv = {
             },
             {
                 "id": 1,
-                "header": "Team",
-                "filter": "team"
+                "header": "Themplates",
+                "filter": "theme"
             },
 
             {
@@ -177,8 +177,8 @@ const cv = {
             },
             {
                 "id": 4,
-                "header": "Themplates",
-                "filter": "theme"
+                "header": "Team",
+                "filter": "team"
             }
         ],
         "content": [
@@ -232,7 +232,7 @@ const cv = {
             },
             {
                 id: 7,
-                img: 'p-4.png',
+                img: 'p4.png',
                 link: 'https://github.com/cavidann/vcard',
                 name: 'Vcard',
                 description: 'Console Application For Virtual Card',
@@ -331,7 +331,9 @@ const cv = {
                 img: 'shell.png',
                 link: 'http://coder.az/shell/index.html',
                 name: 'Shell',
-                description: 'Site for Lubristar LLC',
+                description: "Founded in 2010, Transcaucasian Distribution Company has been acknowledged as a Shell Lubricants Macro Distribution in Azerbaijan since the day of establishment."
+                +
+                "\nThis location makes the use of the country as a logistics center easier. This enables the company suppliers to optimize the costs and therefore minimize the prices of the products supplied. Significant is that the main function of the company is to make sure that the lead times are shortened and the supply terms are suited to the customer as much as possible.",
                 category: 'all theme team'
             },
             {
@@ -347,7 +349,12 @@ const cv = {
                 img: 'israfly.png',
                 link: 'http://coder.az/israFly',
                 name: 'IsraFly',
-                description: 'Turizm Site for IsraFly',
+                description: 
+                "Israfly tour  agency takes you to every corner of the globe. You  just choose one of China's oldest temples, Norway's fjords, Italy's unique streets and other countries rich in history, culture and nature pleasing to the eye and we make this unforgettable journey to you. Israfly Travel offers hotel options at an affordable price for your comfortable travel full of adventure."
+                +
+                "\nThey say: 'Our team plays an important role in providing a pleasant and memorable holiday. We offer hiking, shopping, winter sports, discovery, family and world tours. Additionally, our services include insurance, car hire, transportation, and visa arrangement.'"
+                +
+                "\nWe are known as a travel company with the highest safety standards for traveling around the globe and are committed to providing our clients with a great adventure experience.",
                 category: 'all theme team'
             }
         ]

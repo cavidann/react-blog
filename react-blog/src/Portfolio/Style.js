@@ -29,10 +29,37 @@ export const ResetedUl = styled.ul`
     height:calc(100vh - ${height}px);
     overflow-y:scroll;    
 `
+export const BlogDesc=styled.p`
+    color: white;
+`
+export const BlogHeader=styled.h2`
+    color:${color.yellow}
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    margin: 10px 0;
+`
+export const BlogImg=styled.div`
+    height:163px;
+    overflow:hidden;
+    img{
+        height:100%;
+        object-fit:cover;
+        transition:.3s ease-in-out;
+    }
+`
 export const PortfolioItem = styled.li`
     width:25%;
     padding:0px 10px;
     box-sizing:border-box;
+    overflow:hidden;
+    &:hover{
+        ${BlogImg}{
+            img{
+                transform:scale(1.1)
+            }
+        }
+    }
 `
 
 export const Filter = styled.li`
@@ -42,3 +69,4 @@ export const Filter = styled.li`
     list-style:none;
     transition:0.3s;
 `
+
